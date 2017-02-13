@@ -1,0 +1,9 @@
+[Unit]
+Description=Sonatype Nexus Repository Manager 3: %I
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=sonatype/nexus3'
+
+# Setup the volumes
+Environment='DOCKER_VOLUME_NEXUS_DATA=/srv/docker/sonatype-nexus/instance/%i/data:/nexus-data'
